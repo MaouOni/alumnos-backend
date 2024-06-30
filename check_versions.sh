@@ -24,3 +24,7 @@ mvn -version
 
 # Build the application
 ./mvnw clean install
+
+# Write environment variables to a file for later sourcing
+echo "export JAVA_HOME=/opt/render/project/.java" >> ~/.bashrc
+echo "export PATH=/opt/render/project/.java/bin:\$PATH" >> ~/.bashrc
