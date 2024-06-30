@@ -33,12 +33,10 @@ public class UserController {
     @PutMapping("/{id}")
     public User updateUser(@PathVariable Long id, @RequestBody User userDetails) {
         User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
-
         user.setNombre(userDetails.getNombre());
         user.setPaterno(userDetails.getPaterno());
         user.setMaterno(userDetails.getMaterno());
         user.setEmail(userDetails.getEmail());
-
         return userRepository.save(user);
     }
 
