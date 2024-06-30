@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Download and extract Java
-wget -O /tmp/openjdk-17_linux-x64_bin.tar.gz https://download.java.net/java/GA/jdk17/0d1cfde4252546c6931947bc77629c18/35/GPL/openjdk-17_linux-x64_bin.tar.gz
+wget -O /tmp/openjdk-17_linux-x64_bin.tar.gz https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.tar.gz
 mkdir -p /opt/render/project/.java
 tar -xzf /tmp/openjdk-17_linux-x64_bin.tar.gz -C /opt/render/project/.java --strip-components=1
 
@@ -10,7 +10,7 @@ export JAVA_HOME=/opt/render/project/.java
 export PATH=$JAVA_HOME/bin:$PATH
 
 # Download and extract Maven
-wget -O /tmp/apache-maven-3.8.4-bin.tar.gz https://downloads.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
+wget -O /tmp/apache-maven-3.8.4-bin.tar.gz https://archive.apache.org/dist/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz
 mkdir -p /opt/render/project/.m2
 tar -xzf /tmp/apache-maven-3.8.4-bin.tar.gz -C /opt/render/project/.m2 --strip-components=1
 
